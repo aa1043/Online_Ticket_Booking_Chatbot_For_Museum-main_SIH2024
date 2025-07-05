@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Toggle Example</title>
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <!-- Floating Logo Image as Toggle Button -->
+    <img id="toggleChatbotLogo" class="btn-toggle" src="pictures/chatbot.png" alt="Chatbot Logo">
+
+    <!-- Chatbot Container -->
+    <div id="chatbotContainer" class="chatbot-container hidden">
+        <div id="chatContainer">
+            <div id="chatHeader">
+                <img id="chatbotLogo" src="pictures/chatbot.png" alt="Chatbot Logo">
+                <span id="chatbotName">AI-ra</span>
+            </div>
+            <div id="chatbox" class="chatbox"></div>
+            <div id="typingIndicator" class="typing-indicator">
+                <img id="typingLogo" src="pictures/chatbot.png" alt="Typing Logo"> AI-ra is typing...
+            </div>
+            <div id="inputContainer">
+                <input type="text" id="userInput" class="user-input" placeholder="Type your message here..." disabled>
+                <button id="submitButton" class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Include Your Scripts -->
+    <script src="toggle.js"></script>
+</body>
+</html>

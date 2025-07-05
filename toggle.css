@@ -1,0 +1,340 @@
+/* styles.css */
+
+/* Style for the toggle button */
+/* Style for the floating logo image */
+.btn-toggle {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    width: 60px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's on top of other content */
+    /* border-radius: 50%; Make it circular */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Optional: adds shadow */
+    filter: drop-shadow(0 0 0.75rem goldenrod);
+    transition: transform 0.3s, opacity 0.3s; /* Smooth animations */
+    animation: bounce 1s infinite alternate;
+}
+
+/* Chatbot container styling */
+.chatbot-container {
+    position: fixed;
+    bottom: 60px;
+    right: 70px;
+    width: fit-content; /* Adjust as needed */
+    height: 600px; /* Adjust as needed */
+    background-color: #fff; /* Background color of the chatbot */
+    border: 1px solid #ccc; /* Border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    transform: scale(0); /* Start as scaled down */
+    opacity: 0; /* Start as invisible */
+    transition: transform 0.5s, opacity 0.5s; /* Smooth animations */
+    overflow: hidden; /* Hide overflowing content */
+    z-index: 999; /* Ensure it appears on top of other content */
+}
+
+/* Hidden class to hide the chatbot container */
+.hidden {
+    display: none;
+}
+
+
+#chatbotContainer {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: none; /* Remove default transitions to avoid conflicts */
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+*{
+
+    font-family: "Gilda Display";
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#chatContainer {
+    width: 400px;
+    height: 600px;
+    /* margin: 50px auto; */
+    /* background: #121010; */
+    background: hsla(0, 0%, 0%, 1);
+    background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 33%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 33%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 33%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#555555", GradientType=1 );
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#chatHeader {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: goldenrod;
+    color: #121010;
+    border-bottom: 1px solid #000;
+}
+
+#chatbotLogo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#chatbotName {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chatbox {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between messages */
+}
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    max-width: fit-content; /* Box size matches message size */
+    margin: 0; /* Remove margin */
+}
+
+.user-message {
+    background-color: goldenrod;
+    color: #121010;
+    align-self: flex-end; /* Align user messages to the right */
+    text-align: right; /* Right align text */
+}
+
+.bot-message {
+    background-color: #cc1111;
+    /* background-color: #333; */
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ffffff;
+    align-self: flex-start; /* Align bot messages to the left */
+    text-align: left; /* Left align text */
+}
+
+.typing-indicator {
+    padding: 10px;
+    display: none;
+    font-style: italic;
+    color: #999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#typingLogo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+#inputContainer {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background: #2c2c2c;
+}
+
+.user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.submit-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: #121010;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #d8b30a;
+}
+
+.suggestions button {
+    margin: 5px;
+    padding: 10px;
+    background-color: transparent;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    transition: all 0.3s linear;
+}
+
+.suggestions button:hover {
+    background-color: goldenrod;
+    color: #000;
+}
+
+.ticket-options {
+    margin-top: 20px;
+    color: #ffffff; /* Ensures text is visible against a dark background */
+}
+
+.ticket-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ticket-type label {
+    flex-grow: 1;
+    color: #ffffff; /* White color for visibility */
+}
+
+.increment {
+    display: flex;
+    align-items: center;
+}
+
+.increment button {
+    background-color: goldenrod; /* Same as button color for consistency */
+    color: #000; /* Black text on yellow button */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.increment button:hover {
+    background-color: #d4a00d; /* Slightly darker yellow on hover */
+}
+
+.increment input {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #333; /* Dark background for input */
+    color: #fff; /* White text for input field */
+}
+
+
+.preview-box {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: goldenrod;
+    border-radius: 5px;
+}
+
+.preview-box .header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.preview-box p {
+    margin: 5px 0;
+}
+
+.idType{
+    margin: 5px;
+    padding: 10px;
+    background-color: transparent;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    transition: all 0.3s linear;
+}
+
+.idType:hover {
+    background-color: goldenrod;
+    color: #000;
+}
+
+.ticket-options{
+    padding: 10px;
+    border : 1px solid goldenrod;
+    border-radius: 4px;
+}
+
+/* Style for the preview box */
+.preview-box {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: goldenrod;
+    border-radius: 5px;
+}
+
+/* Style for the button container */
+.button-container {
+    margin-top: 10px;
+    text-align: center; /* Center align the buttons */
+}
+
+.btn2 {
+    margin: 5px;
+    padding: 10px;
+    background-color: transparent;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    transition: all 0.3s linear;
+}
+
+/* Hover effect for buttons */
+.btn2:hover {
+    background-color: goldenrod;
+    color: #000;
+}
+
+.btn3{
+    margin-top: 40px;
+}

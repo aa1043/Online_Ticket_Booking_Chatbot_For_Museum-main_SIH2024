@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Indian Museum - Founded 1814</title>
+    <link rel="shortcut icon" href="./assetss/logo.jpeg.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Gilda Display:wght@400&display=swap"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="english.css">
+</head>
+<body>
+    <!-- Aira -->
+
+     <!-- Floating Logo Image as Toggle Button -->
+    <img id="toggleChatbotLogo" class="btn-toggle" src="pictures/chatbot.png" alt="Chatbot Logo">
+
+    <!-- Chatbot Container -->
+    <div id="chatbotContainer" class="chatbot-container hidden">
+        <div id="chatContainer">
+            <div id="chatHeader">
+                <img id="chatbotLogo" src="pictures/chatbot.png" alt="Chatbot Logo">
+                <span id="chatbotName">AI-ra</span>
+            </div>
+            <div id="chatbox" class="chatbox"></div>
+            <div id="typingIndicator" class="typing-indicator">
+                <img id="typingLogo" src="pictures/chatbot.png" alt="Typing Logo"> AI-ra is typing...
+            </div>
+            <div id="inputContainer">
+                <input type="text" id="userInput" class="user-input" placeholder="Type your message here..." disabled>
+                <button id="submitButton" class="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="aira-text">
+        <p>Hi! I am AI-ra, how can I assist you?</p>
+    </div>
+    <div id="main">
+
+
+        <div id="nav">
+            <div id="nav1">
+                <!-- <p>en<i class="ri-arrow-right-s-line"></i></p> -->
+                <select id="pageSelector" onchange="navigateToPage()">
+                    <option value="" disabled selected>Translate</option>
+                    <option value="urdu.html">اردو</option>
+                    <option value="bengali.html">বাংলা</option>
+                    <option value="hindi.html">हिन्दी</option>
+                </select>
+                 <!-- <a href="https://artsandculture.google.com/streetview/indian-museum-kolkata/0QEiXKSIoMFGWA?sv_h=-20&sv_p=0&sv_pid=0IBcI_BmQY6tULJpUSU7Hw&sv_lid=6616126487887102933&sv_lng=88.35099610817679&sv_lat=22.557664623917844&sv_z=0.9999999999999997"></a> -->
+                <h1>The Indian Museum</h1>
+                <a href="#" class="btn">Tickets</a>
+            </div>
+            <div id="nav2">
+                <ul>
+                    <li class="link"><a href="#" class="text">Home</a></li>
+                    <li class="link"><a href="#" class="text">About</a></li>
+                    <li class="link"><a href="#" class="text">Visit</a></li>
+                    <li class="link"><a href="#" class="text">History</a></li>
+                    <li class="link"><a href="#" class="text">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="hero"> 
+            <!-- <img src="./assetss/hero.jpg" alt=""> -->
+
+            <!-- Swiper js  -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./assetss/slider1.jpeg.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assetss/slider2.jpeg.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assetss/slider9.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assetss/item7.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assetss/item4.jpg" />
+                  </div>
+                </div>
+                <div class="swiper-button-next btn1"></div>
+                <div class="swiper-button-prev btn1"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            <div id="text">
+                <h2>Explore The Cultural Legacies</h2>
+                <a href="https://artsandculture.google.com/streetview/indian-museum-kolkata/0QEiXKSIoMFGWA?sv_h=-20&sv_p=0&sv_pid=0IBcI_BmQY6tULJpUSU7Hw&sv_lid=6616126487887102933&sv_lng=88.35099610817679&sv_lat=22.557664623917844&sv_z=0.9999999999999997" target=" " class="btn">Virtual Tour</a>
+            </div>
+        </div>
+        <div id="hero2">
+            <div id="left">
+                <h3>Preserving India's History for Future Generations</h3>
+            </div>
+            <div id="right">
+                <h3>All Mondays Closed <br> Tue To Sun : 10am To 6pm</h3>
+            </div>
+        </div>
+        <div id="about">
+            <h2>About</h2>
+            <div id="about-con">
+                <div id="about-img">
+                    <img src="./assetss/img3.jpeg.jpg" alt="img">
+                </div>
+                <div id="about-text">
+                    <p>Founded in 1814 at the cradle of the Asiatic Society of Bengal (at the present building of the Asiatic Society, 1 Park Street, Kolkata), Indian Museum is the earliest and the largest multipurpose Museum not only in the Indian subcontinent but also in the Asia-Pacific region of the world. With the foundation of Indian Museum in 1814, the Museum movement started rolling in India and through the year…</p>
+                    <a href="#" id="link1">Read More...</a>
+                </div>
+            </div>
+            <div id="about-card">
+                <div class="card">
+                    <h3>Museum Gallery</h3>
+                    <p>Many rare and unique specimens, both Indian and trans-Indian, relating to humanities and natural sciences, are preserved and displayed in the galleries…</p>
+                    <a href="#" id="link1">More Info</a>
+                </div>
+                <div class="card">
+                    <h3>Latest Events</h3>
+                    <p>All the details of events & exhibitions held in Indian Museum, Kolkata.</p>
+                    <a href="#" id="link1">More Info</a>
+                </div>
+                <div class="card">
+                    <h3>Latest Exhibitions</h3>
+                    <p>All the details of events & exhibitions held in Indian Museum, Kolkata.</p>
+                    <a href="#" id="link1">More Info</a>
+                </div>
+            </div>
+        </div>
+        <div id="highlight">
+            <h2>Highlight</h2>
+            <div id="h-card">
+                <div class="h-card">
+                    <div class="h-card-img">
+                        <img src="./assetss/event1.png" alt="">
+                    </div>
+                    <p>Indian Museum, Kolkata in collaboration with the Art of Living inaugurated the celebration of the International Day of Yoga On June 21, 2024</p>
+                </div>
+                <div class="h-card">
+                    <div class="h-card-img">
+                        <img src="./assetss/event2.png" alt="">
+                    </div>
+                    <p>On the occasion of International Museum Day, May 18, 2024, the Indian Museum, Kolkata</p>
+                </div>
+                <div class="h-card">
+                    <div class="h-card-img">
+                        <img src="./assetss/event3.jpg" alt="">
+                    </div>
+                    <p>Cultural Performance on “Vasant Utsav”
+                    </p>
+                </div>
+            </div>
+            <div id="link">
+                <a href="#" class="btn">See More</a>
+            </div>
+        </div>
+        <div id="gallery">
+            <h2>Gallery</h2>
+            <div id="gallery-con">
+                <div id="g1">
+                    <div id="g11">
+                        <img src="./assetss/item1.jpg" alt="">
+                    </div>
+                    <div id="g12" class="g12">
+                        <img src="./assetss/item9.webp" alt="">
+                    </div>
+                </div>
+                <div id="g2">
+                    <div id="g21">
+                        <img src="./assetss/img2.webp" alt="">
+                    </div>
+                    <div id="g22">
+                        <img src="./assetss/item6.jpg" alt="">
+                    </div>
+                </div>
+                <div id="g1">
+                    <div id="g11">
+                        <img src="./assetss/item2.jpg" alt="">
+                    </div>
+                    <div id="g12" class="g121">
+                        <img src="./assetss/item4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="link">
+                <a href="#" class="btn">See More</a>
+            </div>
+        </div>
+        <div id="visitor">
+            <h2>Visitor's Info</h2>
+            <div id="v-con">
+                <div id="v-left">
+                    <img src="./assetss/info2.jpg" alt="">
+                </div>
+                <div id="v-right">
+                    <h3>Timing</h3>
+                    <p>Tue To Sun: 10am To 6pm</p>
+                    <h3>Address</h3>
+                    <p>27, Jawaharlal Nehru Road, Park Street Area, Kolkata – 700016.</p>
+                    <h3>Contact</h3>
+                    <p>(033) 2252 1790</p>
+                    <p>indianmuseumkolkata2@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="ftext">
+                <h2>The Indian Museum</h2>
+                <h3>Founded 1814</h3>
+            </div>
+            <div id="fitems">
+                <div class="item">
+                    <h3>Quick Links</h3>
+                    <!-- <a href="https://artsandculture.google.com/streetview/indian-museum-kolkata/0QEiXKSIoMFGWA?sv_h=-20&sv_p=0&sv_pid=0IBcI_BmQY6tULJpUSU7Hw&sv_lid=6616126487887102933&sv_lng=88.35099610817679&sv_lat=22.557664623917844&sv_z=0.9999999999999997" class="text">Virtual Tour</a> -->
+                    <a href="#" class="text">Ministry Of Culture</a>
+                    <a href="#" class="text">General Guidelines</a>
+                </div>
+                <div class="item">
+                    <h3>Help</h3>
+                    <a href="#" class="text">Visitor's Info</a>
+                    <a href="#" class="text">Events</a>
+                    <a href="#" class="text">Notice</a>
+                    <a href="#" class="text">Contact Us</a>
+                </div>
+                <div class="item">
+                    <h3>Socials</h3>
+                    <a href="https://www.facebook.com/Indianmuseumkolkata/" target="_blank"class="text">Facebook</a>
+                    <a href="https://x.com/indianmuseumkol?lang=en" target="_blank"class="text">X</a>
+                    <a href="https://www.youtube.com/c/IndianMuseum"target="_blank" class="text">YouTube</a>
+                    <a href="https://www.instagram.com/indianmuseumkolkata" target="_blank"class="text">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div id="copy-right">
+            <h3>© 2023 Indian Museum - All Rights Reserved | Hosted & Managed by <span>Web Wizards</span></h3>
+        </div>
+    </div>
+    
+<!-- ticket template -->
+
+<div class="ticket created-by-anniedotexe">
+	<div class="left">
+		<div class="image">
+			<!-- <p class="admit-one">
+				<span>ADMIT ONE</span>
+				<span>ADMIT ONE</span>
+				<span>ADMIT ONE</span>
+			</p>
+			<div class="ticket-number">
+				<p>
+					#20030220
+				</p>
+			</div> -->
+		</div>
+		<div class="ticket-info">
+            <p class="date">
+                <span id="dayOfWeek">TUESDAY</span>
+                <span id="eventDate" class="june-29">JUNE 29TH</span>
+                <span id="eventYear">2021</span>
+            </p>
+            <div class="show-name">
+                <h1 id="eventName">SOUR Prom</h1>
+                <h2 id="artistName">Olivia Rodrigo</h2>
+            </div>
+            <div class="time">
+                <p>8:00 PM <span>TO</span> 11:00 PM</p>
+                <p>DOORS <span>@</span> 7:00 PM</p>
+            </div>
+            <p class="location">
+                <span id="eventLocation">East High School</span>
+                <span class="separator"><i class="far fa-smile"></i></span>
+                <span>Salt Lake City, Utah</span>
+            </p>
+        </div>
+        <div class="right">
+            <div class="right-info-container">
+                <div class="show-name">
+                    <h1 id="eventNameRight">SOUR Prom</h1>
+                </div>
+                <div class="time">
+                    <p>8:00 PM <span>TO</span> 11:00 PM</p>
+                    <p>DOORS <span>@</span> 7:00 PM</p>
+                </div>
+                <div class="barcode">
+                    <img id="qrCodeImage" src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">
+                </div>
+                <p class="ticket-number">
+                    #<span id="ticketNumber">20030220</span>
+                </p>
+            </div>
+        </div>
+       
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- ticket template cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+        function navigateToPage() {
+    const selector = document.getElementById('pageSelector');
+    const selectedPage = selector.value;
+    if (selectedPage) {
+        window.location.href = selectedPage;
+    }
+}
+
+    </script>
+     <script src="english.js"></script>
+</body>
+</html>

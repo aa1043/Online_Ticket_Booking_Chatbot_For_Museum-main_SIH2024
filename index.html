@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking Chatbot</title>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Gilda Display:wght@400&display=swap"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="chatContainer">
+        <div id="chatHeader">
+            <img id="chatbotLogo" src="pictures/chatbot.png" alt="Chatbot Logo">
+            <span id="chatbotName">AI-ra</span>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div id="typingIndicator" class="typing-indicator">
+            <img id="typingLogo" src="pictures/chatbot.png" alt="Typing Logo"> AI-ra is typing...
+        </div>
+        <div id="inputContainer">
+            <input type="text" id="userInput" class="user-input" placeholder="Type your message here..." disabled>
+            <button id="submitButton" class="submit-button">Submit</button>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
