@@ -1,7 +1,7 @@
 <h1 align="center">🎟️ Online Ticket Booking Chatbot for Museum</h1>
 
 <p align="center">
-  Web chatbot that assists visitors in booking museum tickets and answering FAQs — built with ❤️ for seamless interaction.
+  Web chatbot that assists visitors in booking museum tickets and answering FAQs — built with ❤️ for seamless interaction
 </p>
 
 <p align="center">
